@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for year in years %}
+            {%  if year == 1 %}
+                <li>{{ year }} год</li>
+            {% elif year == 2 or year == 3 or year == 4 %}
+                <li>{{ year }} года</li>
+            {% elif year >= 5 %}
+                <li>{{ year }} лет</li>
+            {% endif %}
+        {% empty %}
+            пустой список
+        {% endfor %}
+    </ul>
+</body>
+</html>
